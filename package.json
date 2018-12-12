@@ -1,0 +1,17 @@
+{
+  "name": "xjsml",
+  "version": "1.0.0",
+  "description": "Extensible JS markap language (express.js template engine)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "express.js",
+    "template",
+    "engine"
+  ],
+  "author": "Juris Krumgolds",
+  "license": "ISC"
+}
