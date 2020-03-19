@@ -1,8 +1,8 @@
 {
   "name": "xjsml",
   "version": "0.0.1",
-  "description": "Extensible JS markap language (express.js template engine)",
-  "main": "index.js",
+  "description": "Extensible JS markup language (express.js template engine)",
+  "main": "./lib/xjsml.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +13,8 @@
     "engine"
   ],
   "author": "Juris Krumgolds",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
 }
