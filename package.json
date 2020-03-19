@@ -1,6 +1,6 @@
 {
   "name": "xjsml",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Extensible JS markap language (express.js template engine)",
   "main": "index.js",
   "scripts": {
