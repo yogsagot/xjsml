@@ -6,12 +6,12 @@
     "configurations": [
         {
             "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
+            "request": "attach",
+            "name": "Attach",
+            "port": 9240,
             "skipFiles": [
                 "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}/lib/xjsml.js"
+            ]
         }
     ]
 }

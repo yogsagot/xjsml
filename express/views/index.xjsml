@@ -1,0 +1,3 @@
+<h2>this is my demo app for xjsml</h2>
+<div><= title /></div>
+<_ sessionvar />
