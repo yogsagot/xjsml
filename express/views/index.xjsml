@@ -1,2 +1,2 @@
 <h2 id="idd" when=(true)>this is my demo app for xjsml</h2>
-<raw title replace=["bold", "italic"] />
+<raw title trim />
