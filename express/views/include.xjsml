@@ -1,0 +1,5 @@
+<nl2br><b>this is included</b>
+<echo topvar uppercase />
+<assign name="bottomvar" value="this is bottomvar" />
+<echo bottomvar uppercase />
+</nl2br>

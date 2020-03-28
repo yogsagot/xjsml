@@ -1,3 +1,6 @@
-<!DOCTYPE html>
-<!-- comment tag -->
-<h2 before=params.id ...params after="paramafter"><echo "this is my demo app for xjsml"  /></h2>
+<nl2br><!DOCTYPE html>
+<assign name="topvar" value="This is a top var" />
+<assign name="topvar" value="This is a top var 2" />
+<echo topvar />
+<include src="upfolder/upfolder.xjsml" />
+</nl2br>
