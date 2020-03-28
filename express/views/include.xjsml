@@ -1,5 +1,6 @@
-<nl2br><b>this is included</b>
-<echo topvar uppercase />
-<assign name="bottomvar" value="this is bottomvar" />
-<echo bottomvar uppercase />
+<param name="testparam" value="test" />
+<assign name="assignparam" value="assign" />
+<nl2br>
+    test param: <echo testparam />
+    assign param: <echo assignparam />
 </nl2br>

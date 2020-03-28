@@ -1,6 +1,2 @@
-<nl2br><!DOCTYPE html>
-<assign name="topvar" value="This is a top var" />
-<assign name="topvar" value="This is a top var 2" />
-<echo topvar />
-<include src="upfolder/upfolder.xjsml" />
-</nl2br>
+<!DOCTYPE html>
+<nl2br><include src="include.xjsml" assignparam="top assign"/></nl2br>
