@@ -1,2 +1,4 @@
-<H2 id="iddqd" ShitCase ><echo "this is my demo app for xjsml"  /></H2>
+<!DOCTYPE html >
+<!-- comment tag -->
+<H2 id="iddqd" ><echo "this is my demo app for xjsml"  /></H2>
 <echo title shitcase />
