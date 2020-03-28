@@ -1,3 +1,2 @@
-<h2>this is my demo app for xjsml</h2>
-<var name="newvar" value=(2+2*2) />
-<echo newvar />
+<h2 id="idd" when=(true)>this is my demo app for xjsml</h2>
+<raw obj json />
