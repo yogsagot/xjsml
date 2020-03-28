@@ -1,3 +1,3 @@
-  <h1> <= message /></h1>
-  <comment><h2> <= error.status /> </h2></comment>
-  <pre> <= error.stack /> </pre>
+  <h1> <echo message /></h1>
+  <if error.status><h2> <echo error.status /> </h2></if>
+  <pre> <echo error.stack /> </pre>
