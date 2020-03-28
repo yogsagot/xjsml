@@ -1,6 +1,3 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <!-- comment tag -->
-<H2 id="iddqd" ><echo "this is my demo app for xjsml"  /></H2>
-
-<callback name="supercallback" paramA="vvv" uppercase paramb=20 />
-<echo callbackpatch />
+<h2 before=params.id ...params after="paramafter"><echo "this is my demo app for xjsml"  /></h2>
