@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var title = 'title';
+  var title = 'this IS SOME shit cAsE';
   var arr = [111, "333", "fdsf", 34.44]
   res.render('index', { title: title, arr: arr });
 });

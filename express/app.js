@@ -14,6 +14,22 @@ const xjsml = new (require('..'))({
   caseSensitive: true
 });
 
+xjsml.registerTag('test', function(tag, args) {
+  return "<b>TEST</b>" + this.renderTag(tag.children, args);
+});
+
+xjsml.registerModifier('shitcase', function(value, param) {
+  var res = [...value];
+  for (let index = 0; index < res.length; index++) {
+    if (index % 2 == 0) {
+      res[index] = String(res[index]).toUpperCase();
+    } else {
+      res[index] = String(res[index]).toLowerCase();
+    }
+  }
+  return res.join('');
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'xjsml');

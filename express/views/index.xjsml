@@ -1,2 +1,2 @@
-<H2 id="idd" uppercase >this is my demo app for xjsml</H2>
-<Echo title />
+<H2 id="iddqd" ShitCase ><echo "this is my demo app for xjsml"  /></H2>
+<echo title shitcase />
