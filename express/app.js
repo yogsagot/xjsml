@@ -9,13 +9,12 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const xjsml = require('..');
-var engine = new xjsml();
+const xjsml = new (require('..'))();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'xjsml');
-app.engine('xjsml', engine.express(app));
+app.engine('xjsml', xjsml.express());
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,11 +23,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
-  req.xjsmlsessionvars = {
-    sessionvar: "this is a nodemon 5"
-  };
+  res.locals.sessionvar = "this is sessionvar"
   next();
 });
+
+xjsml.globals.globalvar = "this is globalvar";
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
