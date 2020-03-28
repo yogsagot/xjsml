@@ -1,4 +1,2 @@
-<h2 id="idd" if=(2+2==4)>this is my demo app for xjsml</h2>
-<echo title />
-dfgdfgdfg
-<b>dff</b>
+<H2 id="idd" uppercase >this is my demo app for xjsml</H2>
+<Echo title />

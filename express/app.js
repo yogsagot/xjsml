@@ -10,7 +10,8 @@ var usersRouter = require('./routes/users');
 var app = express();
 
 const xjsml = new (require('..'))({
-  cacheEnabled: true
+  cacheEnabled: app.get('env') !== 'development',
+  caseSensitive: true
 });
 
 // view engine setup
