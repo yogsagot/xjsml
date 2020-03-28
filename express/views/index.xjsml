@@ -1,4 +1,6 @@
 <!DOCTYPE html >
 <!-- comment tag -->
 <H2 id="iddqd" ><echo "this is my demo app for xjsml"  /></H2>
-<echo title shitcase />
+
+<callback name="supercallback" paramA="vvv" uppercase paramb=20 />
+<echo callbackpatch />

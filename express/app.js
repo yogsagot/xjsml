@@ -11,7 +11,9 @@ var app = express();
 
 const xjsml = new (require('..'))({
   cacheEnabled: app.get('env') !== 'development',
-  caseSensitive: true
+  caseSensitive: true,
+  javascriptTagAllowed: false,
+  callbacksAllowed: true
 });
 
 xjsml.registerTag('test', function(tag, args) {
@@ -28,6 +30,11 @@ xjsml.registerModifier('shitcase', function(value, param) {
     }
   }
   return res.join('');
+});
+
+xjsml.registerCallback('supercallback', function(paramA, paramB) {
+  this.callbackpatch = `param A is ${paramA}`;
+  return `returning param B: ${paramB * 5}`;
 });
 
 // view engine setup
