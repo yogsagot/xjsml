@@ -1,2 +1,3 @@
 <h2>this is my demo app for xjsml</h2>
-<echo sessionvar />
+<var name="newvar" value=(2+2*2) />
+<echo newvar />
