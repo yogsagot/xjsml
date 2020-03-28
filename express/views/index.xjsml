@@ -1,2 +1,5 @@
 <h2 id="idd" when=(2+2==5)>this is my demo app for xjsml</h2>
-<nl2br><echo title /></nl2br>
+<assign name="key2" value="random" />
+<for {'a': 'vv', 'b': 233} key="key3" >
+    <echo key3 />: <echo item /> <br/>
+</for>
