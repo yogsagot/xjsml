@@ -9,7 +9,9 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-const xjsml = new (require('..'))();
+const xjsml = new (require('..'))({
+  cacheEnabled: true
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
