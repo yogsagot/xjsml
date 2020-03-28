@@ -1,2 +1,2 @@
-<h2 id="idd" when=(true)>this is my demo app for xjsml</h2>
+<h2 id="idd" when=(2+2==5)>this is my demo app for xjsml</h2>
 <raw title trim />
