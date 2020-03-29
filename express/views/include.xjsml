@@ -1,5 +1,3 @@
 <param name="testparam" value="fff" />
-<nl2br>
-    test param: <echo testparam />
-    <content>This is <b>content</b></content>
-</nl2br>
+test param: <echo testparam />
+<content>This is <b>content</b></content>

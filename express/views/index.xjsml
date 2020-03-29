@@ -1,2 +1,8 @@
-<!DOCTYPE html>
-<nl2br><include src="include.xjsml" testparam="top assign">mycontent</include></nl2br>
+<layout src="layout.xjsml">
+    <block name="myblock" mode="append">
+        <include src="include.xjsml" testpdsaram="top1 assign">
+            mycontent
+        </include>
+        Hello from Block!
+    </block>
+</layout>
