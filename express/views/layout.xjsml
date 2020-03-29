@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+<register name='element' src="element.xjsml" />
 <html>
   <head>
     <title>XJSML markup demo</title>
   </head>
   <body>
     <h1>XJSML markup demo</h1>
+    <element />
     <p>
         <a href="https://www.freecodecamp.org/contribute/">The freeCodeCamp Contribution Page</a> shows you how and where you can contribute to freeCodeCamp's community and growth.
     </p>

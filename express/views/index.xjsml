@@ -4,5 +4,8 @@
             mycontent
         </include>
         Hello from Block!
+        <element elparam="overriden">
+            Well, I guess it works;
+        </element>
     </block>
 </layout>

@@ -1,0 +1,9 @@
+<param name="elparam" value="This is included element" />
+<div>
+    <pre>
+        <content>
+            Hello from the included element!<br/>
+        </content>
+        <echo elparam />
+    </pre>
+</div>
