@@ -1,6 +1,5 @@
-<param name="testparam" value="test" />
-<assign name="assignparam" value="assign" />
+<param name="testparam" value="fff" />
 <nl2br>
     test param: <echo testparam />
-    assign param: <echo assignparam />
+    <content>This is <b>content</b></content>
 </nl2br>

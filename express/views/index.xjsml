@@ -1,2 +1,2 @@
 <!DOCTYPE html>
-<nl2br><include src="include.xjsml" assignparam="top assign"/></nl2br>
+<nl2br><include src="include.xjsml" testparam="top assign">mycontent</include></nl2br>
