@@ -1,5 +1,3 @@
-#!./nodemon --inspect=9240 
-
 /**
  * Module dependencies.
  */
