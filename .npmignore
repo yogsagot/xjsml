@@ -1,3 +1,6 @@
+.vscode
 node_modules
 express
 tests
+config.yml
+jest.config.js
