@@ -4,6 +4,6 @@
         <content>
             Hello from the included element!<br/>
         </content>
-        <echo elparam />
+        <echo elparam replace=[] />
     </pre>
 </div>
