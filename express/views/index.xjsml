@@ -1,11 +1,3 @@
-<layout src="layout.xjsml">
-    <block name="myblock" mode="append">
-        <include src="include.xjsml" testpdsaram="top1 assign">
-            mycontent
-        </include>
-        Hello from Block!
-        <element elparam="overriden">
-            Well, I guess it works;
-        </element>
-    </block>
-</layout>
+<if (val > 1)>
+    value is more than 1
+</if>
