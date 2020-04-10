@@ -1,8 +1,2 @@
-<script>
-    <include src="alert.xjsml" />
-</script>
-<if (val > 1)>
-    value is more than 1
-    <else></else>
-    not bigger than 1
-</if>
+<echo func() />
+<echo arr[1] />
