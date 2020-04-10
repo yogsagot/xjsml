@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   var title = 'Title from app';
   var params = {id: "myid", class: title, required:true};
-  res.render('index', { title: title, params: params, val:2 });
+  res.render('index', { title: title, params: params, val:1 });
 });
 
 module.exports = router;
