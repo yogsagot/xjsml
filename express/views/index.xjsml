@@ -1,2 +1,6 @@
-<echo func() />
-<echo arr[1] />
+<if (arr[0] > 0)>
+
+    <echo func() shitcase />
+    <echo arr[1] />
+
+</if>

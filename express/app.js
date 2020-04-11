@@ -20,7 +20,7 @@ xjsml.registerTag('test', function(tag, args) {
   return "<b>TEST</b>" + this.renderTag(tag.children, args);
 });
 
-xjsml.registerModifier('shitcase', function(value, param) {
+xjsml.registerModifier('shitcase', function(value, param, values) {
   var res = [...value];
   for (let index = 0; index < res.length; index++) {
     if (index % 2 == 0) {
@@ -29,7 +29,7 @@ xjsml.registerModifier('shitcase', function(value, param) {
       res[index] = String(res[index]).toLowerCase();
     }
   }
-  return res.join('');
+  return res.join('') + values.func();
 });
 
 xjsml.registerCallback('supercallback', function(paramA, paramB) {
