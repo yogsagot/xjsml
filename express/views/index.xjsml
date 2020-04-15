@@ -1,6 +1,9 @@
-<if (arr[0] > 0)>
+<div>
+<comment><if (arr[0] > 0) ></comment>
+
 
     <echo func() shitcase />
     <echo arr[1] />
+<comment></if></comment>
 
-</if>
+</div>
