@@ -4,6 +4,10 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var title = 'Title from app';
+  var user = {
+    firstname: 'Juris',
+    lastname: 'Krumgolds'
+  }
   var params = {id: "myid", class: title, required:true};
 
   var func = function() {
@@ -14,7 +18,7 @@ router.get('/', function(req, res, next) {
   arr.push(1);
   arr.push('ffff');
 
-  res.render('index', { title: title, params: params, func: func, arr: arr });
+  res.render('index', { title: title, params: params, func: func, arr: arr, user: user });
 });
 
 module.exports = router;

@@ -1,9 +1,10 @@
 <div>
 <comment><if (arr[0] > 0) ></comment>
 
+<with user>
+    <echo firstname /> <echo lastname />
+</with>
 
-    <echo func() shitcase />
-    <echo arr[1] />
 <comment></if></comment>
 
 </div>
