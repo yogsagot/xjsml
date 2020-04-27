@@ -1,6 +1,6 @@
 {
   "name": "xjsml",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Extensible JS markup language (express.js template engine)",
   "main": "./lib/xjsml.js",
   "scripts": {
