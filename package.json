@@ -1,6 +1,6 @@
 {
   "name": "xjsml",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Extensible JS markup language (express.js template engine)",
   "main": "./lib/xjsml.js",
   "scripts": {
@@ -15,6 +15,6 @@
   "author": "Juris Krumgolds",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^25.4.0"
+    "jest": "^25.5.3"
   }
 }
