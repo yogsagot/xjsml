@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     firstname: 'Juris',
     lastname: 'Krumgolds'
   }
-  var params = {id: "myid", class: title, required:true};
+  var params = {id: "myid", class: title, required:false};
 
   var func = function() {
     return "hello from func";

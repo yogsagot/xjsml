@@ -1,4 +1,4 @@
-<div>
+<div class=["one", params.required ? "required" : "not-required", `three${params.id}`] style=params>
 <comment><if (arr[0] > 0) ></comment>
 
 <with user>
