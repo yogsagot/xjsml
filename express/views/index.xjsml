@@ -1,7 +1,10 @@
-<assign name="var1" value=333>
-<assign name="var2" value=666>
-    <echo var1 />
-    <echo var2 />
-</assign>
+<div class=["one", params.required ? "required" : "not-required", `1three${params.id}`] sort style=params sort >
+<comment><if (arr[0] > 0) ></comment>
 
-<echo var1 />
+<with user>
+    <echo firstname /> <echo lastname />
+</with>
+
+<comment></if></comment>
+
+</div>

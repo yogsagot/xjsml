@@ -8,7 +8,9 @@ router.get('/', function(req, res, next) {
     firstname: 'Juris',
     lastname: 'Krumgolds'
   }
-  var params = {id: "myid", class: title, required:false};
+  var params = {id: "myid", class: title, required:true};
+
+  var sortfunc = (a, b) => (a > b ? -1 : 1);
 
   var func = function() {
     return "hello from func";
@@ -18,7 +20,7 @@ router.get('/', function(req, res, next) {
   arr.push(1);
   arr.push('ffff');
 
-  res.render('index', { title: title, params: params, func: func, arr: arr, user: user });
+  res.render('index', { title: title, params: params, func: func, arr: arr, user: user, sortfunc: sortfunc });
 });
 
 module.exports = router;
