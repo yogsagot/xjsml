@@ -1,10 +1,7 @@
-<div class=["one", params.required ? "required" : "not-required", `three${params.id}`] style=params>
-<comment><if (arr[0] > 0) ></comment>
+<assign name="var1" value=333>
+<assign name="var2" value=666>
+    <echo var1 />
+    <echo var2 />
+</assign>
 
-<with user>
-    <echo firstname /> <echo lastname />
-</with>
-
-<comment></if></comment>
-
-</div>
+<echo var1 />
