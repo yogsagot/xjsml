@@ -4,7 +4,7 @@
   "description": "Extensible JS markup language (express.js template engine)",
   "main": "./lib/xjsml.js",
   "scripts": {
-    "test": "jest"
+    "test": "mocha"
   },
   "keywords": [
     "node.js",
@@ -15,6 +15,7 @@
   "author": "Juris Krumgolds",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^25.5.4"
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
   }
 }
