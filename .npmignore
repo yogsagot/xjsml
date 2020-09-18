@@ -3,3 +3,5 @@ node_modules
 express
 test
 config.yml
+.nyc_output
+coverage
