@@ -61,6 +61,7 @@ describe("xjsml", () => {
 
         assert.equal(rendered, html);
     });
+
     it("06 attribute in statement", () => {
         var filename = "xjsml/06 attribute in statement";
         var args = {
@@ -83,6 +84,57 @@ describe("xjsml", () => {
         };
         var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
         var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+    
+    it("08 attribute in object field", () => {
+        var filename = "xjsml/08 attribute in object field";
+        var args = {
+            obj: {
+                link: "https://github.com/yogsagot/xjsml"
+            }
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("09 attribute in object nested field", () => {
+        var filename = "xjsml/09 attribute in object nested field";
+        var args = {
+            obj: {
+                nestedobj: {
+                    link: "https://github.com/yogsagot/xjsml"
+                }
+            }
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("10 attribute in array item", () => {
+        var filename = "xjsml/10 attribute in array item";
+        var args = {
+            arr:['item1', 'item2', "https://github.com/yogsagot/xjsml", 'item4']
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    //TODO strip extra brackets
+    it("11 attribute in nested array item", () => {
+        var filename = "xjsml/11 attribute in nested array item";
+        var args = {
+            arr:[[], ['item1', 'item2', "https://github.com/yogsagot/xjsml", 'item4'], [1,2,3]]
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
 
         assert.equal(rendered, html);
     });
