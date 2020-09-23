@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XJSML markup demo</title>
+  </head>
+  <body>
+    <h1>XJSML markup demo</h1>
+    <p>
+        <a href=(obj.arr[2](protocol, host, username, project))>Contribute</a> on GitHub.
+    </p>
+  </body>
+</html>

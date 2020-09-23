@@ -87,7 +87,7 @@ describe("xjsml", () => {
 
         assert.equal(rendered, html);
     });
-    
+
     it("08 attribute in object field", () => {
         var filename = "xjsml/08 attribute in object field";
         var args = {
@@ -132,6 +132,141 @@ describe("xjsml", () => {
         var filename = "xjsml/11 attribute in nested array item";
         var args = {
             arr:[[], ['item1', 'item2', "https://github.com/yogsagot/xjsml", 'item4'], [1,2,3]]
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("12 attribute in function", () => {
+        var filename = "xjsml/12 attribute in function";
+        var args = {
+            protocol: "https",
+            host: "github.com",
+            username: "yogsagot",
+            project: "xjsml",
+            func: function(protocol, host, username, project) {
+                return `${protocol}://${host}/${username}/${project}`;
+            }
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("13 attribute in method", () => {
+        var filename = "xjsml/13 attribute in method";
+        var args = {
+            obj: {
+                protocol: "https",
+                host: "github.com",
+                username: "yogsagot",
+                project: "xjsml",
+                func: function () {
+                    return `${this.protocol}://${this.host}/${this.username}/${this.project}`;
+                }
+            }
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("14 attribute in method params", () => {
+        var filename = "xjsml/14 attribute in method params";
+        var args = {
+            protocol: "https",
+            host: "github.com",
+            username: "yogsagot",
+            project: "xjsml",
+            obj: {
+                func: function(protocol, host, username, project) {
+                    return `${protocol}://${host}/${username}/${project}`;
+                }
+            }
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    //TODO strip extra brackets
+    it("15 attribute in array item func", () => {
+        var filename = "xjsml/15 attribute in array item func";
+        var args = {
+            protocol: "https",
+            host: "github.com",
+            username: "yogsagot",
+            project: "xjsml",
+            arr: ['item1', 2, function(protocol, host, username, project) {
+                    return `${protocol}://${host}/${username}/${project}`;
+                }, 'other item']
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    //TODO strip extra brackets
+    it("16 attribute in array item method", () => {
+        var filename = "xjsml/16 attribute in array item method";
+        var args = {
+            protocol: "https",
+            host: "github.com",
+            username: "yogsagot",
+            project: "xjsml",
+            arr: ['item1', 2, {
+                func: function(protocol, host, username, project) {
+                    return `${protocol}://${host}/${username}/${project}`;
+                }
+            }, 'other item']
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    //TODO strip extra brackets
+    it("17 attribute in obj field array item", () => {
+        var filename = "xjsml/17 attribute in obj field array item";
+        var args = {
+            protocol: "https",
+            host: "github.com",
+            username: "yogsagot",
+            project: "xjsml",
+            obj: {
+                arr: ['item1', 2, function (protocol, host, username, project) {
+                        return `${protocol}://${host}/${username}/${project}`;
+                    }, 'other item']
+            }
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    //TODO strip extra brackets
+    it("18 attribute in obj field array method", () => {
+        var filename = "xjsml/18 attribute in obj field array method";
+        var args = {
+            protocol: "https",
+            host: "github.com",
+            username: "yogsagot",
+            project: "xjsml",
+            obj: {
+                arr: ['item1', 2, {
+                    func: function (protocol, host, username, project) {
+                        return `${protocol}://${host}/${username}/${project}`;
+                    }
+                }, 'other item']
+            }
         };
         var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
         var html = loadfile(`xjsml/01 html.html`);
