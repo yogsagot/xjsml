@@ -273,6 +273,76 @@ describe("xjsml", () => {
 
         assert.equal(rendered, html);
     });
+
+    it("19 attribute list in array", () => {
+        var filename = "xjsml/19 attribute list in array";
+        var args = {
+            classvar1: "firstclass",
+            classvar2: 'secondclass',
+            backquotevar: 'backquotevalue',
+            flag: false,
+            boolvar1: "boolvalue1",
+            boolvar2: "boolvalue2",
+            classarr: ["arrclass1", 'arrclass2', 'anotherarrclass']
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("20 attribute list in array var", () => {
+        var filename = "xjsml/20 attribute list in array var";
+        var classvar1 = "firstclass";
+        var classvar2 = 'secondclass';
+        var backquotevar = 'backquotevalue';
+        var flag = false;
+        var boolvar1 = "boolvalue1";
+        var boolvar2 = "boolvalue2";
+        var classarr = ["arrclass1", 'arrclass2', 'anotherarrclass']
+        var args = {
+            arr: ['value1', "value2", classvar1, classvar2, `${backquotevar}`, (flag ? boolvar1 : boolvar2), ...classarr]
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("21 attribute list in array join", () => {
+        var filename = "xjsml/21 attribute list in array join";
+        var args = {
+            classvar1: "firstclass",
+            classvar2: 'secondclass',
+            backquotevar: 'backquotevalue',
+            flag: false,
+            boolvar1: "boolvalue1",
+            boolvar2: "boolvalue2",
+            classarr: ["arrclass1", 'arrclass2', 'anotherarrclass']
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("22 attribute list in array var join", () => {
+        var filename = "xjsml/22 attribute list in array var join";
+        var classvar1 = "firstclass";
+        var classvar2 = 'secondclass';
+        var backquotevar = 'backquotevalue';
+        var flag = false;
+        var boolvar1 = "boolvalue1";
+        var boolvar2 = "boolvalue2";
+        var classarr = ["arrclass1", 'arrclass2', 'anotherarrclass']
+        var args = {
+            arr: ['value1', "value2", classvar1, classvar2, `${backquotevar}`, (flag ? boolvar1 : boolvar2), ...classarr]
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
 });
 
 function fileName(filename) {
