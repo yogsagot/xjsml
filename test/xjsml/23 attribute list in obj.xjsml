@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XJSML markup demo</title>
+  </head>
+  <body>
+    <h1>XJSML markup demo</h1>
+    <div style={attr1: "test", attr2: 10.2, attr3: var1, attr4: var2*2, attr5: (boolvar ? var3 + 'tail' : "test")}>
+        div content
+    </div>
+  </body>
+</html>

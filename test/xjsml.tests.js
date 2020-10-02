@@ -19,6 +19,7 @@ describe("xjsml", () => {
 
         assert.equal(rendered, html);
     });
+
     it("02 single quotes", () => {
         var filename = "xjsml/02 single quotes";
         var args = {};
@@ -337,6 +338,77 @@ describe("xjsml", () => {
         var classarr = ["arrclass1", 'arrclass2', 'anotherarrclass']
         var args = {
             arr: ['value1', "value2", classvar1, classvar2, `${backquotevar}`, (flag ? boolvar1 : boolvar2), ...classarr]
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("23 attribute list in obj", () => {
+        var filename = "xjsml/23 attribute list in obj";
+        var args = {
+            var1: "variable1",
+            var2: 26,
+            boolvar: true,
+            var3: 'head'
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("24 attribute list in obj var", () => {
+        var filename = "xjsml/24 attribute list in obj var";
+        var var1 = "variable1";
+        var var2 = 26;
+        var boolvar = true;
+        var var3 = 'head';
+        var args = {
+            obj: {
+                attr1: "test",
+                attr2: 10.2,
+                attr3: var1,
+                attr4: var2 * 2,
+                attr5: (boolvar ? var3 + 'tail' : "test")
+            }
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+
+    it("25 attribute list in obj join", () => {
+        var filename = "xjsml/25 attribute list in obj join";
+        var args = {
+            var1: "variable1",
+            var2: 26,
+            boolvar: true,
+            var3: 'head'
+        };
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("26 attribute list in obj var join", () => {
+        var filename = "xjsml/26 attribute list in obj var join";
+        var var1 = "variable1";
+        var var2 = 26;
+        var boolvar = true;
+        var var3 = 'head';
+        var args = {
+            obj: {
+                attr1: "test",
+                attr2: 10.2,
+                attr3: var1,
+                attr4: var2 * 2,
+                attr5: (boolvar ? var3 + 'tail' : "test")
+            }
         };
         var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
         var html = loadfile(`${filename}.html`);
