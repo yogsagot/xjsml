@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XJSML markup demo</title>
+  </head>
+  <body>
+    <h1>XJSML markup demo</h1>
+    <div attribute='test of "double quotes" text'>
+        div content
+    </div>
+  </body>
+</html>

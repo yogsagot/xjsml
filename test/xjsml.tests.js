@@ -20,11 +20,94 @@ describe("xjsml", () => {
         assert.equal(rendered, html);
     });
 
+    it("01-1 attribute is number", () => {
+        var filename = "xjsml/01-1 attribute is number";
+        var args = {};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("01-2 attribute is exponent number", () => {
+        var filename = "xjsml/01-2 attribute is exponent number";
+        var args = {};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("01-3 attribute is hex number", () => {
+        var filename = "xjsml/01-3 attribute is hex number";
+        var args = {};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
     it("02 single quotes", () => {
         var filename = "xjsml/02 single quotes";
         var args = {};
         var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
         var html = loadfile(`xjsml/01 html.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("02-1 escaped quote", () => {
+        var filename = "xjsml/02-1 escaped quote";
+        var args = {};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("02-2 single quote inside double quote", () => {
+        var filename = "xjsml/02-2 single quote inside double quote";
+        var args = {};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    //TODO: single quotes should not be escaped
+    it("02-3 escaped single quote", () => {
+        var filename = "xjsml/02-3 escaped single quote";
+        var args = {};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    //TODO Douvle quote should be escaped
+    it("02-4 double quote inside single quote", () => {
+        var filename = "xjsml/02-4 double quote inside single quote";
+        var args = {};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("02-5 backquote inside single quote", () => {
+        var filename = "xjsml/02-5 backquote inside single quote";
+        var args = {var: 'test'};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
+
+        assert.equal(rendered, html);
+    });
+
+    it("02-6 backquote inside doule quote", () => {
+        var filename = "xjsml/02-6 backquote inside doule quote";
+        var args = {var: 'test'};
+        var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+        var html = loadfile(`${filename}.html`);
 
         assert.equal(rendered, html);
     });
