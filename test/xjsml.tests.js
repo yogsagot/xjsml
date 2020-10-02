@@ -1,10 +1,10 @@
 var assert = require("chai").assert;
-var xjsml = require("..");
+var XJSML = require("..");
 const fs = require("fs");
 const path = require("path");
 
 describe("xjsml", () => {
-    const xjsml = new (require(".."))({
+    const xjsml = new XJSML({
         cacheEnabled: false,
         caseSensitive: true,
         javascriptTagAllowed: false,
