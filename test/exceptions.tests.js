@@ -3,7 +3,7 @@ var XJSML = require("..");
 const fs = require("fs");
 const path = require("path");
 
-describe("xjsml", () => {
+describe("tests", () => {
     describe("exceptions", () => {
         const xjsml = new XJSML({
             cacheEnabled: false,
@@ -13,7 +13,7 @@ describe("xjsml", () => {
         });
 
         it("01 file not found html", () => {
-            var filename = "xjsml/exceptions/01 file not found html";
+            var filename = "exceptions/01 file not found html";
             var args = {};
             function callRender() {
                 xjsml.renderFile(fileName(`${filename}.xjsml`), args)
@@ -22,7 +22,7 @@ describe("xjsml", () => {
         });
 
         it("02 Unclosed tag", () => {
-            var filename = "xjsml/exceptions/02 Unclosed tag";
+            var filename = "exceptions/02 Unclosed tag";
             var args = {};
             function callRender() {
                 xjsml.renderFile(fileName(`${filename}.xjsml`), args)
