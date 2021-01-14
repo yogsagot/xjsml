@@ -20,6 +20,15 @@ describe("xjsml", () => {
             }
             assert.throws(callRender);
         });
+
+        it("02 Unclosed tag", () => {
+            var filename = "xjsml/exceptions/02 Unclosed tag";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Unclosed tag br in file .* on line 3/);
+        });
     });
 });
 
