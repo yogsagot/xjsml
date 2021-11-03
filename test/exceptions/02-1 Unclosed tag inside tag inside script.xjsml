@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <script>
+            <if (true)>
+                <echo "123" >
+            </if>
+        </script>
+    </body>
+</html>

@@ -29,6 +29,15 @@ describe("tests", () => {
             }
             assert.throws(callRender, /Unclosed tag br in file .* on line 3/);
         });
+
+        it("02-1 Unclosed tag inside tag inside script", () => {
+            var filename = "exceptions/02-1 Unclosed tag inside tag inside script";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Unclosed tag echo in file .* on line 5/);
+        });
     });
 });
 
