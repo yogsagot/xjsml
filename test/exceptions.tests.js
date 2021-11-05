@@ -108,6 +108,17 @@ describe("tests", () => {
             assert.throws(callRender, /Cannot parse modifier default in parameter 0: SyntaxError: .* in file .* on line 3/);
         });
 
+        it("09 triple dot not an object", () => {
+            var filename = "exceptions/09 triple dot not an object";
+            var args = {a: 'abc'};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Cannot parse argument ...a in tag div: Error: not an object in file .* on line 3/);
+        });
+
+        //TODO: triple dot syntax error
+
     });
 });
 
