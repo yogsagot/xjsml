@@ -72,6 +72,42 @@ describe("tests", () => {
             assert.throws(callRender, /A modifier \'uppercase\' with no corresponding value in file .* on line 3/);
         });
 
+        it("05 cannot parse argument ReferenceError", () => {
+            var filename = "exceptions/05 cannot parse argument ReferenceError";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /cannot parse argument 0: ReferenceError: a is not defined in file .* on line 3/);
+        });
+
+        it("06 cannot parse argument generic error", () => {
+            var filename = "exceptions/06 cannot parse argument generic error";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /cannot parse argument 0: SyntaxError: .* in file .* on line 3/);
+        });
+
+        it("07 Cannot parse modifier in parameter ReferenceError", () => {
+            var filename = "exceptions/07 Cannot parse modifier in parameter ReferenceError";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Cannot parse modifier default in parameter 0: ReferenceError: b is not defined in file .* on line 3/);
+        });
+
+        it("08 Cannot parse modifier in parameter generic error", () => {
+            var filename = "exceptions/08 Cannot parse modifier in parameter generic error";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Cannot parse modifier default in parameter 0: SyntaxError: .* in file .* on line 3/);
+        });
+
     });
 });
 
