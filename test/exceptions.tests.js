@@ -51,6 +51,16 @@ describe("tests", () => {
             }
             assert.throws(callRender, /Mismatching '=' on line 3/);
         });
+
+        it("03-1 Mismatching '='", () => {
+            var filename = "exceptions/03-1 Mismatching eq";
+            function callRender() {
+                var args = {a: 3};
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Mismatching '=' on line 3/);
+        });
+
     });
 });
 
