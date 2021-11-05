@@ -38,6 +38,19 @@ describe("tests", () => {
             }
             assert.throws(callRender, /Unclosed tag echo in file .* on line 5/);
         });
+
+        //TODO: Unclosed <script>, <style>
+
+        //TODO: Unexpected "<" in tag
+
+        it("03 Mismatching '='", () => {
+            var filename = "exceptions/03 Mismatching eq";
+            function callRender() {
+                var args = {a: 3};
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Mismatching '=' on line 3/);
+        });
     });
 });
 
