@@ -45,8 +45,8 @@ describe("tests", () => {
 
         it("03 Mismatching '='", () => {
             var filename = "exceptions/03 Mismatching eq";
+            var args = {};
             function callRender() {
-                var args = {a: 3};
                 xjsml.renderFile(fileName(`${filename}.xjsml`), args)
             }
             assert.throws(callRender, /Mismatching '=' on line 3/);
@@ -54,11 +54,22 @@ describe("tests", () => {
 
         it("03-1 Mismatching '='", () => {
             var filename = "exceptions/03-1 Mismatching eq";
+            var args = {};
             function callRender() {
-                var args = {a: 3};
                 xjsml.renderFile(fileName(`${filename}.xjsml`), args)
             }
             assert.throws(callRender, /Mismatching '=' on line 3/);
+        });
+
+        //TODO: Mismatching '=' on line 603
+
+        it("04 A modifier with no corresponding value", () => {
+            var filename = "exceptions/04 A modifier with no corresponding value";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /A modifier \'uppercase\' with no corresponding value in file .* on line 3/);
         });
 
     });
