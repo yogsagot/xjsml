@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <echo (1+2+3) />
+        <_ (1+2+3) />
+        <echo ("abc"+"def") />
+        <_ ("abc"+"def") />
+        <echo ("abc"+"def") uppercase />
+        <_ ("abc"+"def") uppercase />
+    </body>
+</html>
