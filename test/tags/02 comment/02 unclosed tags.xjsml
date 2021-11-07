@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <comment>
+            Some crap with dangerous symbols: <<< >>>
+            <div>
+                <br>This tag is unclosed, would cause a error outside a comment
+            </div>
+        </comment>
+        <*>
+            Some crap with dangerous symbols: <<< >>>
+            <div>
+                <br>This tag is unclosed, would cause a error outside a comment
+            </div>
+        </*>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <comment>This is commented text</comment>
+        <*>This is commented text</*>
+        <comment this is mixed comment>
+            This is also commented text
+        </comment>
+        <* this is mixed comment>
+            This is also commented text
+        </*>
+    </body>
+</html>
