@@ -38,6 +38,15 @@ describe("tags", () => {
 
             assert.equal(rendered, html);
         });
+
+        it("04 htmlentities", () => {
+            var filename = "01 echo/04 htmlentities";
+            var args = {rawtext: "this string contains '&', '<', '>' and '\"'"};
+            var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
     });
 });
 
