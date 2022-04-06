@@ -1,0 +1,20 @@
+<assign name="var1" value="abc" />
+<assign name="var2" value=666 />
+<assign name="var3" value=`var=${var1}` />
+<assign name="var4" value=(var2*2) />
+<assign name="var5" value="abc" />
+<var name="var6" value="var6" />
+<variable name="var7" value="var7" />
+<assign var="var8" val="var8" />
+<html>
+    <body>
+        <echo var1 />
+        <echo var2 />
+        <echo var3 />
+        <echo var4 />
+        <echo var5 />
+        <echo var6 />
+        <echo var7 />
+        <echo var8 />
+    </body>
+</html>
