@@ -1,5 +1,5 @@
+var XJSML = require("../../lib/xjsml");
 var assert = require("chai").assert;
-var XJSML = require("../..");
 const fs = require("fs");
 const path = require("path");
 
