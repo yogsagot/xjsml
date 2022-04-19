@@ -38,6 +38,24 @@ describe("tags", () => {
             }
             assert.throws(callRender, /var1 is not defined .* on line 6/);
         });
+
+        it("04 assign error no name", () => {
+            var filename = "04 assign/04 assign error no name";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /tag has no "name" and no "var" property .* on line 3/);
+        });
+
+        it("05 assign error no value", () => {
+            var filename = "04 assign/05 assign error no value";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /tag has no "value" and no "val" property on line .* on line 3/);
+        });
     });
 });
 
