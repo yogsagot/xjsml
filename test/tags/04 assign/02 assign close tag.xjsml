@@ -1,0 +1,7 @@
+<html>
+    <body>
+        <assign name="var1" value="test">
+            <echo var1 />
+        </assign>
+    </body>
+</html>

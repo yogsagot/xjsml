@@ -20,6 +20,24 @@ describe("tags", () => {
 
             assert.equal(rendered, html);
         });
+
+        it("02 assign close tag", () => {
+            var filename = "04 assign/02 assign close tag";
+            var args = {};
+            var rendered = xjsml.renderFile(fileName(`${filename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("03 assign error var outside tag", () => {
+            var filename = "04 assign/03 assign error var outside tag";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /var1 is not defined .* on line 6/);
+        });
     });
 });
 
