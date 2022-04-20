@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <if (intvar == 1)>
+            Variable is 1!
+            <elseif (intvar == 2) />
+            Variable is 2!
+            <elseif (intvar == 3) />
+            Variable is 3!
+            <elseif (intvar == 4) />
+            Variable is 4!
+            <elseif (intvar == 5) />
+            Variable is 5!
+            <else />
+            Variable is neither!
+        </if>
+    </body>
+</html>

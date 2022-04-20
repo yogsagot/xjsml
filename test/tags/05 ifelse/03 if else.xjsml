@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <if boolvar>
+            variable is true!
+            <else />
+            variable is false!
+        </if>
+    </body>
+</html>
