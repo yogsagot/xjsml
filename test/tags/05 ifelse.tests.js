@@ -211,6 +211,26 @@ describe("tags", () => {
             assert.equal(rendered, html);
         });
 
+        it("20 elseif with children ignore outside tag", () => {
+            var templatename = "05 ifelse/20 elseif with children ignore outside tag";
+            var filename = "05 ifelse/20 elseif with children ignore outside tag";
+            var args = {intvar: 2};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("21 else with children ignore outside tag", () => {
+            var templatename = "05 ifelse/20 elseif with children ignore outside tag";
+            var filename = "05 ifelse/21 else with children ignore outside tag";
+            var args = {intvar: -1};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
     });
 });
 

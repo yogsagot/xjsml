@@ -1,0 +1,15 @@
+<html>
+    <body>
+        <if (intvar == 1)>
+            Variable is 1!
+            <elseif (intvar == 2)>
+                Variable is 2!
+            </elseif>
+            Outside variable 2 is ignored!
+            <else>
+                Variable is neither!
+            </else>
+            Outside else statement is ignored!
+        </if>
+    </body>
+</html>
