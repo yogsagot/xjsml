@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <for obj>
+            <echo key />:
+            <for item key="key1" item="item1">
+                <echo key1 />: <echo item1 /><br />
+            </for>
+        </for>
+    </body>
+</html>
