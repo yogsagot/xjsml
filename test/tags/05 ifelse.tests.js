@@ -111,6 +111,15 @@ describe("tags", () => {
 
             assert.equal(rendered, html);
         });
+
+        it("11 elseif error no value", () => {
+            var filename = "05 ifelse/11 elseif error no value";
+            var args = {};
+            function callRender() {
+                xjsml.renderFile(fileName(`${filename}.xjsml`), args)
+            }
+            assert.throws(callRender, /Cannot read properties of undefined/);
+        });
     });
 });
 
