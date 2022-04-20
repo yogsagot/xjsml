@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <with obj>
+            <echo key1 />
+            <echo key2 />
+            <echo key3 />
+        </with>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <echo obj.key1 />
+        <echo obj.key2 />
+        <echo obj.key3 />
+        <with obj>
+            <echo key1 />
+            <echo key2 />
+            <echo key3 />
+        </with>
+    </body>
+</html>
