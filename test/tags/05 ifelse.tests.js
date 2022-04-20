@@ -140,6 +140,77 @@ describe("tags", () => {
 
             assert.equal(rendered, html);
         });
+
+        it("14 elseif with children option 1", () => {
+            var templatename = "05 ifelse/14 elseif with children";
+            var filename = "05 ifelse/14 elseif with children option 1";
+            var args = {intvar: 1};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("15 elseif with children option 2", () => {
+            var templatename = "05 ifelse/14 elseif with children";
+            var filename = "05 ifelse/15 elseif with children option 2";
+            var args = {intvar: 2};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("15 elseif with children option 2", () => {
+            var templatename = "05 ifelse/14 elseif with children";
+            var filename = "05 ifelse/15 elseif with children option 2";
+            var args = {intvar: 2};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("16 elseif with children option 3", () => {
+            var templatename = "05 ifelse/14 elseif with children";
+            var filename = "05 ifelse/16 elseif with children option 3";
+            var args = {intvar: 3};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("17 elseif with children option 4", () => {
+            var templatename = "05 ifelse/14 elseif with children";
+            var filename = "05 ifelse/17 elseif with children option 4";
+            var args = {intvar: 4};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("18 elseif with children option 5", () => {
+            var templatename = "05 ifelse/14 elseif with children";
+            var filename = "05 ifelse/18 elseif with children option 5";
+            var args = {intvar: 5};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("19 elseif with children else", () => {
+            var templatename = "05 ifelse/14 elseif with children";
+            var filename = "05 ifelse/19 elseif with children else";
+            var args = {intvar: -1};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
     });
 });
 
