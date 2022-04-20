@@ -120,6 +120,26 @@ describe("tags", () => {
             }
             assert.throws(callRender, /Cannot read properties of undefined/);
         });
+
+        it("12 if with children true", () => {
+            var templatename = "05 ifelse/12 if with children";
+            var filename = "05 ifelse/12 if with children true";
+            var args = {boolvar: true};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
+
+        it("13 if with children false", () => {
+            var templatename = "05 ifelse/12 if with children";
+            var filename = "05 ifelse/13 if with children false";
+            var args = {boolvar: false};
+            var rendered = xjsml.renderFile(fileName(`${templatename}.xjsml`), args);
+            var html = loadfile(`${filename}.html`);
+
+            assert.equal(rendered, html);
+        });
     });
 });
 
