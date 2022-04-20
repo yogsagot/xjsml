@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <switch intvar>
+            Ignored.
+            <case 1>
+                Variable is 1!
+            </case>
+            Also ignored.
+            <case 2>
+                Variable is 2!
+            </case>
+            All outside case tags is ignored.
+            <case 3>
+                Variable is 3!
+            </case>
+            Also this.
+            <case 4>
+                Variable is 4!
+            </case>
+            And this.
+            <else>
+                Variable is neither!
+            </else>
+            And outside else clause as well.
+        </switch>
+    </body>
+</html>

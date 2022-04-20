@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <switch intvar>
+            <case (5+5)>
+                Variable is 5+5!
+            </case>
+            <case (10+10)>
+                Variable is 10+10!
+            </case>
+            <case (15+15)>
+                Variable is 15+15!
+            </case>
+            <case (20+20)>
+                Variable is 20+20!
+            </case>
+            <else>
+                Variable is neither!
+            </else>
+        </switch>
+    </body>
+</html>
