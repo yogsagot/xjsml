@@ -23,7 +23,7 @@ xjsml.registerTag('test', function(tag, args) {
 xjsml.registerModifier('shitcase', function(value, param, values) {
   var res = [...value];
   for (let index = 0; index < res.length; index++) {
-    if (index % 2 == 0) {
+    if (index % 2 === 0) {
       res[index] = String(res[index]).toUpperCase();
     } else {
       res[index] = String(res[index]).toLowerCase();
